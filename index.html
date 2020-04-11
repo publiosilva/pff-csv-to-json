@@ -19,18 +19,34 @@
         <h2>CSV to JSON</h2>
       </div>
       <div class="col s12">
-        <div class="row">
+        <form class="row" onsubmit="event.preventDefault() & handleSubmit()">
           <div class="input-field col s12">
             <textarea id="csv-textarea" class="materialize-textarea"></textarea>
             <label for="csv-textarea">CSV Text</label>
+            <span class="helper-text" data-error="Invalid CSV syntax text" data-success="">
+              Paste here a csv syntax text whose first line is the header
+            </span>
           </div>
-        </div>
+          <div class="input-field col s12">
+            <textarea id="json-textarea" class="materialize-textarea" disabled></textarea>
+            <label for="json-textarea" class="active">JSON Text</label>
+          </div>
+          <div class=" col s12">
+            <button class="btn waves-effect waves-light" type="submit">
+              Convert to JSON
+            </button>
+            <button class="btn waves-effect waves-light" type="reset">
+              Clear
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
